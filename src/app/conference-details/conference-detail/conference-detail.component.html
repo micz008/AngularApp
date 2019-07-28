@@ -1,0 +1,29 @@
+<form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white">
+          <i class="fas fa-chalkboard-teacher"></i>
+        </div>
+      </div>
+      <input name="SessName" #SessName="ngModel" [(ngModel)]="service.formData.SessName" class="form-control"
+        placeholder="Session Title" required pattern="[a-zA-Z ]*">
+
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white">
+          <i class="far fa-clock"></i>
+        </div>
+      </div>
+      <input name="SessDuration" #SessDuration="ngModel" [(ngModel)]="service.formData.SessDuration"
+        class="form-control" placeholder="Session Duration (minutes)" type="number" required>
+    </div>
+  </div>
+  <div class="form-group">
+    <button class="btn btn-success btn-lg btn-block" type="submit" [disabled]="form.invalid"><i class="fas fa-save"></i>
+      Submit </button>
+  </div>
+</form>

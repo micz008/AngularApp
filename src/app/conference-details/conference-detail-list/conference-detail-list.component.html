@@ -1,0 +1,15 @@
+<table class="table table-striped">
+  <tr *ngFor="let cd of service.list">
+    <td>{{cd.SessName}}</td>
+    <td>{{cd.SessDuration}}</td>
+    <td>
+      <i class="far fa-trash-alt fa-lg text-danger" (click)="onDelete(cd.SessName)"></i>
+    </td>
+  </tr>
+  <tr>
+    <td colspan=3><button class="btn btn-block btn-lg btn-success" (click)="onGenerateSched()"><i
+          class="fas fa-cogs"></i> Generate
+        Schedule</button>
+    </td>
+  </tr>
+</table>

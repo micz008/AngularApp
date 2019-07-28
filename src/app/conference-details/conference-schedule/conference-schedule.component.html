@@ -1,0 +1,13 @@
+<table class="table table-bordered" *ngFor="let track of service.confSched">
+  <tr>
+    <td colspan=2><strong>{{track.TrackName}}</strong></td>
+  </tr>
+  <tr>
+    <td>Time</td>
+    <td>Session Title</td>
+  </tr>
+  <tr *ngFor="let sess of track.TrackSessions">
+    <td style="width: 20%">{{sess.SessTime}}</td>
+    <td style="width: 80%">{{sess.SessName}}</td>
+  </tr>
+</table>
